@@ -60,4 +60,4 @@ sidebars:
 - home_sidebar
 
 theme: jekyll-theme-cayman
-baseurl: /sql_s3/
+baseurl: /MLB_DataDevTools/
