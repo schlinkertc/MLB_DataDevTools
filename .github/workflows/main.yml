@@ -28,6 +28,12 @@ jobs:
     - name: Check if there is no diff library/notebooks
       run: |
         if [ -n "$(nbdev_diff_nbs)" ]; then echo -e "!!! Detected difference between the notebooks and the library"; false; fi
+    - name: Set Environment
+      run: |
+        DB_USERNAME: ${{ secrets.DB_USERNAME }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_HOST: ${{ secrets.DB_HOST }}
+        DB_DRIVERNAME: ${{ secrets.DB_DRIVERNAME }}
     - name: Run tests
       run: |
         nbdev_test_nbs
