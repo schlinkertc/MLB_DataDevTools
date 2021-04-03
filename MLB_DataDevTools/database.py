@@ -21,6 +21,7 @@ class DatabaseSettings(BaseSettings):
     class Config:
         env_file = '.env'
         env_prefix:str = 'db_'
+        case_sensitive=False
 
 # Cell
 
